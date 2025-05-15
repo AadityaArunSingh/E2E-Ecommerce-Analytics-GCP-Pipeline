@@ -2,7 +2,7 @@
 # 🌩️ Cloud Computing Coursework Report
 
 > **Student:** Aaditya Singh  
-> **Course:** Cloud Computing 
+> **Course:** Cloud Computing          
 > **Submitted:** 04 May 2025  
 
 This project explores cloud-native solutions for querying, analyzing, and visualizing large-scale datasets using **Google Cloud Platform (GCP)**. It implements a full pipeline from data storage and querying to dashboard visualization and serverless API deployment. The coursework also compares this implementation with an equivalent AWS-based solution.
