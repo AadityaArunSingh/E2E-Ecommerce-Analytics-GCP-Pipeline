@@ -1,9 +1,9 @@
 
 # 🌩️ E2E Ecommerce Analytics GCP Pipeline Report
 
-> **Workflow Type:** Serverless ETL & Visualization Pipeline
+> **Workflow Type:** Serverless ETL & Visualization Pipeline          
 > **Cloud Services Used:** BigQuery · Cloud Run · Vertex AI · Looker Studio          
-> **Deployment:** Dockerized Flask app via Cloud Shell Editor  
+> **Deployment:** Dockerized Flask app via Cloud Shell Editor          
 
 This project explores cloud-native solutions for querying, analyzing, and visualizing large-scale datasets using **Google Cloud Platform (GCP)**. It implements a full pipeline from data storage and querying to dashboard visualization and serverless API deployment.
 
