@@ -1,0 +1,66 @@
+<!-- https://jinja.palletsprojects.com/en/stable/templates/ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Querying through Cloud Run</title>
+    <style>
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        th, td {
+            border: 1px solid #999;
+            padding: 8px 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+
+        form {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Query BigQuery Data</h1>
+    <p>Select a query to run:</p>
+
+    <form method="POST">
+        <input type="radio" name="query_type" value="query1" required> Distribution Centers<br>
+        <input type="radio" name="query_type" value="query2"> Product Cost by Category<br><br>
+        <button type="submit">Run Query</button>
+    </form>
+
+    {% if results is not none %}
+        <h2>Results for Query searched</h2>
+        <table class="center">
+            <tr>
+                {% for col in results.columns %}    
+                    <th>{{ col }}</th>
+                {% endfor %}
+            </tr>
+            {% for row in results.values %}
+                <tr>
+                    {% for val in row %}
+                        <td>{{ val }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+
+</body>
+</html>
